@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "prisma": {
+    "seed": "node prisma/seedBreeds.js"
+  },
   "scripts": {
     "dev": "nodemon app.js"
   },

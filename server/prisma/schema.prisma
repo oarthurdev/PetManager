@@ -21,6 +21,11 @@ model Pet {
   type     String
   age      Int
   imageUrl String
-  owner    User @relation(fields: [ownerId], references: [id])
+  owner    User  @relation(fields: [ownerId], references: [id])
   ownerId  String
+}
+
+model Breed {
+  id   String @id @default(uuid())
+  name String @unique
 }

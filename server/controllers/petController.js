@@ -11,14 +11,21 @@ exports.getPets = async (req, res) => {
 };
 
 exports.addPet = async (req, res) => {
-    const { name, type, age, imageUrl } = req.body;
+    const { name, age, breed, imageUrls } = req.body;
 
+    console.log(breed.name)
     try {
         const pet = await prisma.pet.create({
-            data: { name, type, age, imageUrl, ownerId: req.user.id }
+            data: { 
+                name, 
+                type: breed.name, 
+                age: parseInt(age), 
+                imageUrl: imageUrls, 
+                ownerId: req.user.id 
+            }
         });
         res.status(201).json(pet);
     } catch (error) {
-        res.status(400).json({ message: 'Erro ao cadastrar pet' });
+        res.status(400).json({ message: error });
     }
 };

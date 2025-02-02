@@ -27,7 +27,7 @@ const Pets = () => {
   };
 
   return (
-    <Container>
+    <>
         <BreadcrumbsNav
         items={[
           { name: 'Home', link: '/home', icon: HomeIcon },
@@ -75,7 +75,7 @@ const Pets = () => {
           </TableBody>
         </Table>
       </TableContainer>
-    </Container>
+    </>
   );
 };
 

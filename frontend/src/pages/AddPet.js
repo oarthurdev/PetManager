@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { Home as HomeIcon } from '@mui/icons-material';
 import BreadcrumbsNav from '../components/BreadcrumbsNav';
+import BreedSelector from '../components/BreedSelector';
 
 const AddPet = () => {
   const [name, setName] = useState('');
@@ -64,13 +65,14 @@ const AddPet = () => {
           value={age}
           onChange={(e) => setAge(e.target.value)}
         />
-        <TextField
+        <BreedSelector onChange={(breed) => setBreed(breed)} />
+        {/* <TextField
           label="Raça"
           fullWidth
           margin="normal"
           value={breed}
           onChange={(e) => setBreed(e.target.value)}
-        />
+        /> */}
         <TextField
           label="URLs das Imagens (separadas por vírgula)"
           fullWidth

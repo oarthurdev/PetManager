@@ -10,6 +10,6 @@ body {
   background-size: cover; /* A imagem cobre toda a tela */
   background-position: center; /* Centraliza a imagem */
   background-repeat: no-repeat; /* Não repete a imagem */
-  background-attachment: fixed; /* A imagem fica fixa no scroll */]
+  background-attachment: fixed; /* A imagem fica fixa no scroll */
   overflow: hidden;
 }

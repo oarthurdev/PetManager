@@ -111,4 +111,12 @@ const Login = () => {
   );  
 };
 
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.style.backgroundImage = "url('/images/background_login.png')";
+  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundPosition = "center";
+  document.body.style.backgroundRepeat = "no-repeat";
+  document.body.style.backgroundAttachment = "fixed";
+});
+
 export default Login;
