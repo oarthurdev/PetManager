@@ -15,7 +15,7 @@ exports.register = async (req, res) => {
 
         res.status(201).json({ message: 'Usuário cadastrado com sucesso' });
     } catch (error) {
-        res.status(400).json({ message: 'Erro ao cadastrar usuário' });
+        res.status(400).json({ message: error });
     }
 };
 
@@ -32,6 +32,6 @@ exports.login = async (req, res) => {
         const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
         res.json({ token });
     } catch (error) {
-        res.status(500).json({ message: 'Erro no servidor' });
+        res.status(500).json({ message: error });
     }
 };
